@@ -506,6 +506,15 @@ footer{padding:4rem 3rem 2.5rem;background:var(--char);border-top:1px solid var(
   }
   </script>
 
+
+  <!-- ============ GOOGLE ANALYTICS 4 ============ -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-SSS0XB4R7D"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-SSS0XB4R7D');
+  </script>
 </head>
 <body>
 
@@ -911,8 +920,17 @@ footer{padding:4rem 3rem 2.5rem;background:var(--char);border-top:1px solid var(
 
   // Form submit
   function handleSubmit(btn){
+    // Fire GA4 conversion event for inquiry form submission
+    if (typeof gtag === 'function') {
+      gtag('event', 'generate_lead', {
+        'event_category': 'engagement',
+        'event_label': 'inquiry_form_submitted',
+        'form_location': 'homepage_contact'
+      });
+    }
     btn.textContent='✓ Sent! We\'ll be in touch within 24 hours.';
-    btn.style.background='var(--olive)';btn.disabled=true;
+    btn.style.background='var(--olive)';
+    btn.disabled=true;
   }
 
   // Scroll reveal
