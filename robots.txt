@@ -1,28 +1,48 @@
-# robots.txt for echō Seamless Media Solutions
+# robots.txt for goel — Seamless Media Solutions
 # https://www.goelmethod.ca/
 
+# Default — allow all standard search engines
 User-agent: *
 Allow: /
 Disallow: /admin/
 Disallow: /private/
+Disallow: /*.json$
 
-# AI Crawlers — explicitly allow for GEO (Generative Engine Optimization)
+# AI crawlers — explicitly allow for GEO (Generative Engine Optimization)
+# These crawlers feed answers in ChatGPT, Claude, Perplexity, Google AI Overviews,
+# Copilot, Apple Intelligence, and other generative search engines.
+
 User-agent: GPTBot
 Allow: /
 
 User-agent: ChatGPT-User
 Allow: /
 
+User-agent: OAI-SearchBot
+Allow: /
+
 User-agent: Google-Extended
 Allow: /
 
+User-agent: Googlebot
+Allow: /
+
 User-agent: ClaudeBot
+Allow: /
+
+User-agent: Claude-Web
 Allow: /
 
 User-agent: anthropic-ai
 Allow: /
 
 User-agent: PerplexityBot
+Allow: /
+
+User-agent: Perplexity-User
+Allow: /
+
+User-agent: Applebot
 Allow: /
 
 User-agent: Applebot-Extended
@@ -32,6 +52,21 @@ User-agent: Bytespider
 Allow: /
 
 User-agent: CCBot
+Allow: /
+
+User-agent: cohere-ai
+Allow: /
+
+User-agent: DuckAssistBot
+Allow: /
+
+User-agent: Meta-ExternalAgent
+Allow: /
+
+User-agent: meta-externalfetcher
+Allow: /
+
+User-agent: Mistralai-User
 Allow: /
 
 # Sitemap
