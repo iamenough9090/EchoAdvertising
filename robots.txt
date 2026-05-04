@@ -1,5 +1,5 @@
 # robots.txt for echō Seamless Media Solutions
-# https://www.echoadvertising.ca/
+# https://www.goelmethod.ca/
 
 User-agent: *
 Allow: /
@@ -35,4 +35,4 @@ User-agent: CCBot
 Allow: /
 
 # Sitemap
-Sitemap: https://www.echoadvertising.ca/sitemap.xml
+Sitemap: https://www.goelmethod.ca/sitemap.xml
